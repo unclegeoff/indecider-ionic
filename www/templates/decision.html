@@ -1,0 +1,12 @@
+<div id="decision">
+    <h2>Your Decision</h2>
+    <ion-content>
+        <span class="input-label">New Option</span>
+        <input type="text" placeholder="" name="decision" ng-model="decision">
+    </ion-content>
+    <ion-list show-reorder="true">
+        <ion-item ng-repeat="choice in choices">
+            {{choice}}
+        </ion-item>
+    </ion-list>
+</div>

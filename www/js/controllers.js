@@ -1,15 +1,20 @@
-angular.module('starter.controllers', [])
+angular.module('indecider.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('usernameCtrl', function($scope) {
 })
 
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
+.controller('recentsCtrl', function($scope) {
+        $scope.friends = Friends.all();
 })
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
+.controller('decisionCtrl', function($scope){
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('decisionCtrl', function($scope){
+})
+
+.controller('rankingCtrl', function($scope){
+})
+
+.controller('resultCtrl', function($scope){
 });

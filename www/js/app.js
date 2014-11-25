@@ -5,9 +5,9 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('indecider', ['ionic', 'indecider.controllers', 'indecider.services'])
 
-.run(function($ionicPlatform) {
+/*.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -19,7 +19,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       StatusBar.styleDefault();
     }
   });
-})
+})*/
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -30,11 +30,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $stateProvider
 
     // setup an abstract state for the tabs directive
-    .state('tab', {
+    /*.state('tab', {
       url: "/tab",
       abstract: true,
       templateUrl: "templates/tabs.html"
-    })
+    })*/
 
     // Each tab has its own nav history stack:
 
@@ -53,30 +53,40 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           views: {
               'recents': {
                   templateUrl: 'templates/recents.html',
-                  controller: 'recentFriends'
+                  controller: 'recentFriendsCtrl'
               }
           }
       })
 
-      .state('newDecision', {
-          url: 'decision-name',
+      .state('decision', {
+          url: 'decision',
           views: {
               'decision-name': {
-                  templateUrl: 'templates/decision-name',
-                  controller: 'decisionName'
+                  templateUrl: 'templates/decision.html',
+                  controller: 'decisionCtrl'
               }
           }
       })
 
-      .state('decisionRank', {
-          url: 'decision-rank',
+      .state('ranking', {
+          url: 'ranking',
           views: {
               'decision-rank': {
-                  templateUrl: 'templates/decision-rank',
-                  controller: 'decisionRank'
+                  templateUrl: 'templates/ranking.html',
+                  controller: 'rankingCtrl'
               }
           }
       })
+
+      .state('result', {
+          url: 'result',
+          views: {
+              'result': {
+                  templateUrl: 'templates/result.html',
+                  controller: 'resultCtrl'
+              }
+          }
+      });
 
     /*.state('tab.dash', {
       url: '/dash',
@@ -118,6 +128,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     });*/
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/username');
 
 });
