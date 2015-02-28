@@ -1,13 +1,14 @@
-angular.module('indecider.services', [])
+angular.module('indecider.services', ['ngResource'])
 
 /**
  * A simple example service that returns some data.
  */
-.factory('Friends', function() {
+.factory('Session', function($resource) {
   // Might use a resource here that returns a JSON array
-
+    //TODO: define endpoint from rails backend;
+        return $resource('endpoint');
   // Some fake testing data
-  var friends = [
+  /*var friends = [
     { id: 0, name: 'turdburger' },
     { id: 1, name: 'flowercrotch' },
     { id: 2, name: 'dingleberry' },
@@ -22,5 +23,5 @@ angular.module('indecider.services', [])
       // Simple index lookup
       return friends[friendId];
     }
-  }
+  }*/
 });
