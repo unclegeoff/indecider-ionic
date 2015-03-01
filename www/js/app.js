@@ -49,16 +49,22 @@ angular.module('indecider', ['ionic', 'indecider.controllers', 'indecider.servic
           templateUrl: 'templates/dashboard.html',
           controller: 'dashboardCtrl'
       })
-/*
+
       .state('decisions-list', {
           url: '/decisions',
           templateUrl: 'templates/decisions-list.html',
           controller: 'decisionsListCtrl'
-      })*/
+      })
+
+      .state('decision-start', {
+          url: '/start_dec',
+          templateUrl: 'templates/decision-start.html',
+          controller: 'decisionStartCtrl'
+      })
   ;
 
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/dashboard');
 
 });
