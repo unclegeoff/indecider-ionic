@@ -7,6 +7,11 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('indecider', ['ionic', 'indecider.controllers', 'indecider.services'])
 
+// setting url for api hits
+.constant('ApiEndpoint', {
+    url: 'https://www.herokuapp.com/decider/api'
+})
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -56,10 +61,16 @@ angular.module('indecider', ['ionic', 'indecider.controllers', 'indecider.servic
           controller: 'decisionsListCtrl'
       })
 
-      .state('decision-start', {
-          url: '/start_dec',
-          templateUrl: 'templates/decision-start.html',
-          controller: 'decisionStartCtrl'
+      .state('decision-name', {
+          url: '/decision-name',
+          templateUrl: 'templates/decision-name.html',
+          controller: 'decisionNameCtrl'
+      })
+
+      .state('add-friends', {
+          url: '/add-friends',
+          templateUrl: 'templates/add-friends.html',
+          controller: 'addFriendsCtrl'
       })
   ;
 
