@@ -1,1 +1,1 @@
-angular.module('starter.services', ['ngResource'])
+angular.module('indecider.services', ['ngResource']);

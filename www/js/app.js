@@ -40,12 +40,8 @@ angular.module('indecider', ['ionic', 'indecider.controllers', 'indecider.servic
 
       .state('login', {
           url: '/login',
-          views: {
-              'login': {
-                  templateUrl: 'templates/login.html',
-                  controller: 'loginCtrl'
-              }
-          }
+          templateUrl: 'templates/login.html',
+          controller: 'loginCtrl'
       });
 
   // if none of the above states are matched, use this as the fallback

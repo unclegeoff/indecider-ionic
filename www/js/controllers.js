@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['starter.services'])
+angular.module('indecider.controllers', ['indecider.services'])
 
 
     .controller('loginCtrl', function($scope) {
