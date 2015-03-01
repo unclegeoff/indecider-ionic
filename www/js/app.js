@@ -38,57 +38,17 @@ angular.module('indecider', ['ionic', 'indecider.controllers', 'indecider.servic
 
     // Each tab has its own nav history stack:
 
-      .state('username', {
-          url: '/username',
+      .state('login', {
+          url: '/login',
           views: {
-              'username': {
-                  templateUrl: 'templates/username.html',
-                  controller: 'usernameCtrl'
-              }
-          }
-      })
-
-      .state('recentFriends', {
-          url: '/recents',
-          views: {
-              'recents': {
-                  templateUrl: 'templates/recents.html',
-                  controller: 'recentFriendsCtrl'
-              }
-          }
-      })
-
-      .state('decision', {
-          url: 'decision',
-          views: {
-              'decision-name': {
-                  templateUrl: 'templates/decision.html',
-                  controller: 'decisionCtrl'
-              }
-          }
-      })
-
-      .state('ranking', {
-          url: 'ranking',
-          views: {
-              'decision-rank': {
-                  templateUrl: 'templates/ranking.html',
-                  controller: 'rankingCtrl'
-              }
-          }
-      })
-
-      .state('result', {
-          url: 'result',
-          views: {
-              'result': {
-                  templateUrl: 'templates/result.html',
-                  controller: 'resultCtrl'
+              'login': {
+                  templateUrl: 'templates/login.html',
+                  controller: 'loginCtrl'
               }
           }
       });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/username');
+  $urlRouterProvider.otherwise('/login');
 
 });
