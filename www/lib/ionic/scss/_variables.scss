@@ -2,19 +2,19 @@
 // Indecider Colors
 // -------------------------------
 
-$indecider-orange:                #e04c24 !important;
+/*$indecider-orange:                #e04c24 !important;
 $indecider-teal:                  #4bb4a7 !important;
-$indecider-grey:                  #9a9a9a !important;
+$indecider-grey:                  #9a9a9a !important;*/
 
 // Colors
 // -------------------------------
 
 $light:                           #fff !default;
-$stable:                          $indecider-grey !important;
-$positive:                        $indecider-teal !important;
+$stable:                          #9a9a9a !important;
+$positive:                        #4bb4a7 !important;
 $calm:                            #43cee6 !default;
 $balanced:                        #66cc33 !default;
-$energized:                       $indecider-orange !important;
+$energized:                       #e04c24 !important;
 $assertive:                       #ef4e3a !default;
 $royal:                           #8a6de9 !default;
 $dark:                            #444 !default;

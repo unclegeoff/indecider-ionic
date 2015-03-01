@@ -42,9 +42,25 @@ angular.module('indecider', ['ionic', 'indecider.controllers', 'indecider.servic
           url: '/login',
           templateUrl: 'templates/login.html',
           controller: 'loginCtrl'
-      });
+      })
+
+      .state('dashboard', {
+          url: '/',
+          cache: false,
+          templateUrl: 'templates/dashboard.html',
+          controller: 'dashboardCtrl'
+      })
+
+      .state('decisions-list', {
+          url: '/decisions',
+          cache: false,
+          templateUrl: 'templates/decisions-list.html',
+          controller: 'decisionsListCtrl'
+      })
+  ;
+
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/');
 
 });
