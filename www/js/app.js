@@ -45,18 +45,16 @@ angular.module('indecider', ['ionic', 'indecider.controllers', 'indecider.servic
       })
 
       .state('dashboard', {
-          url: '/',
-          cache: false,
+          url: '/dashboard',
           templateUrl: 'templates/dashboard.html',
           controller: 'dashboardCtrl'
       })
-
+/*
       .state('decisions-list', {
           url: '/decisions',
-          cache: false,
           templateUrl: 'templates/decisions-list.html',
           controller: 'decisionsListCtrl'
-      })
+      })*/
   ;
 
 
